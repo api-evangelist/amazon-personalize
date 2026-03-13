@@ -1,0 +1,131 @@
+openapi: 3.1.0
+info:
+  title: Amazon Personalize API
+  description: >-
+    The Amazon Personalize API enables you to create, manage, and deploy
+    personalization models. You can import interaction data, train
+    recommendation models, create campaigns, and get real-time
+    recommendations through this interface.
+  version: '2018-05-22'
+  contact:
+    name: AWS Support
+    url: https://aws.amazon.com/premiumsupport/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-logo:
+    url: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
+servers:
+  - url: https://personalize.{region}.amazonaws.com
+    description: Amazon Personalize regional endpoint
+    variables:
+      region:
+        default: us-east-1
+        description: AWS region
+        enum:
+          - us-east-1
+          - us-east-2
+          - us-west-2
+          - eu-west-1
+          - eu-central-1
+          - ap-northeast-1
+          - ap-northeast-2
+          - ap-southeast-1
+          - ap-southeast-2
+security:
+  - sigv4: []
+tags:
+  - name: Datasets
+    description: Operations for managing datasets and dataset groups
+  - name: Solutions
+    description: Operations for creating and managing recommendation solutions
+  - name: Campaigns
+    description: Operations for deploying and managing recommendation campaigns
+  - name: Recommenders
+    description: Operations for domain-based recommenders
+paths:
+  /:
+    post:
+      operationId: CreateDatasetGroup
+      summary: Create a dataset group
+      description: Creates an empty dataset group for organizing datasets used for training.
+      tags:
+        - Datasets
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: '#/components/schemas/CreateDatasetGroupRequest'
+      responses:
+        '200':
+          description: Dataset group created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  datasetGroupArn:
+                    type: string
+components:
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
+  schemas:
+    CreateDatasetGroupRequest:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: The name of the dataset group
+        domain:
+          type: string
+          enum:
+            - ECOMMERCE
+            - VIDEO_ON_DEMAND
+          description: The domain of the dataset group
+    DatasetGroup:
+      type: object
+      properties:
+        name:
+          type: string
+        datasetGroupArn:
+          type: string
+        status:
+          type: string
+        domain:
+          type: string
+        creationDateTime:
+          type: string
+          format: date-time
+    Solution:
+      type: object
+      properties:
+        name:
+          type: string
+        solutionArn:
+          type: string
+        recipeArn:
+          type: string
+        datasetGroupArn:
+          type: string
+        status:
+          type: string
+    Campaign:
+      type: object
+      properties:
+        name:
+          type: string
+        campaignArn:
+          type: string
+        solutionVersionArn:
+          type: string
+        minProvisionedTPS:
+          type: integer
+        status:
+          type: string

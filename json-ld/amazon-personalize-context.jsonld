@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "personalize": "https://docs.aws.amazon.com/personalize/latest/dg/",
+    "aws": "https://aws.amazon.com/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "DatasetGroup": {
+      "@id": "personalize:API_DescribeDatasetGroup",
+      "@context": {
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "datasetGroupArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "status": {
+          "@id": "personalize:status",
+          "@type": "xsd:string"
+        },
+        "domain": {
+          "@id": "personalize:domain",
+          "@type": "xsd:string"
+        },
+        "kmsKeyArn": {
+          "@id": "personalize:kmsKeyArn",
+          "@type": "xsd:string"
+        },
+        "roleArn": {
+          "@id": "personalize:roleArn",
+          "@type": "xsd:string"
+        },
+        "creationDateTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        },
+        "lastUpdatedDateTime": {
+          "@id": "schema:dateModified",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Dataset": {
+      "@id": "personalize:API_DescribeDataset",
+      "@context": {
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "datasetArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "datasetType": {
+          "@id": "personalize:datasetType",
+          "@type": "xsd:string"
+        },
+        "schemaArn": {
+          "@id": "personalize:schemaArn",
+          "@type": "xsd:string"
+        },
+        "status": {
+          "@id": "personalize:status",
+          "@type": "xsd:string"
+        },
+        "creationDateTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Solution": {
+      "@id": "personalize:API_DescribeSolution",
+      "@context": {
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "solutionArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "recipeArn": {
+          "@id": "personalize:recipeArn",
+          "@type": "xsd:string"
+        },
+        "datasetGroupArn": {
+          "@id": "personalize:datasetGroupArn",
+          "@type": "xsd:string"
+        },
+        "performAutoML": {
+          "@id": "personalize:performAutoML",
+          "@type": "xsd:boolean"
+        },
+        "performHPO": {
+          "@id": "personalize:performHPO",
+          "@type": "xsd:boolean"
+        },
+        "status": {
+          "@id": "personalize:status",
+          "@type": "xsd:string"
+        }
+      }
+    },
+
+    "Campaign": {
+      "@id": "personalize:API_DescribeCampaign",
+      "@context": {
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "campaignArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "solutionVersionArn": {
+          "@id": "personalize:solutionVersionArn",
+          "@type": "xsd:string"
+        },
+        "minProvisionedTPS": {
+          "@id": "personalize:minProvisionedTPS",
+          "@type": "xsd:integer"
+        },
+        "status": {
+          "@id": "personalize:status",
+          "@type": "xsd:string"
+        },
+        "creationDateTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    },
+
+    "Recommender": {
+      "@id": "personalize:API_DescribeRecommender",
+      "@context": {
+        "name": {
+          "@id": "schema:name",
+          "@type": "xsd:string"
+        },
+        "recommenderArn": {
+          "@id": "schema:identifier",
+          "@type": "xsd:string"
+        },
+        "datasetGroupArn": {
+          "@id": "personalize:datasetGroupArn",
+          "@type": "xsd:string"
+        },
+        "recipeArn": {
+          "@id": "personalize:recipeArn",
+          "@type": "xsd:string"
+        },
+        "status": {
+          "@id": "personalize:status",
+          "@type": "xsd:string"
+        },
+        "creationDateTime": {
+          "@id": "schema:dateCreated",
+          "@type": "xsd:dateTime"
+        }
+      }
+    }
+  }
+}
