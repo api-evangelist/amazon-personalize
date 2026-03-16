@@ -12,7 +12,7 @@ tags:
 - Customer Experience
 - AWS
 created: '2024-01-15'
-modified: '2026-03-13'
+modified: '2026-03-16'
 apis:
 - name: Amazon Personalize API
   description: The Amazon Personalize API enables you to create, train, and deploy machine learning models that generate personalized recommendations for your users.
