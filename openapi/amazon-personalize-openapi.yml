@@ -47,7 +47,7 @@ paths:
   /:
     post:
       operationId: CreateDatasetGroup
-      summary: Create a dataset group
+      summary: Amazon Personalize Create a dataset group
       description: Creates an empty dataset group for organizing datasets used for training.
       tags:
         - Datasets
