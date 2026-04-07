@@ -37,12 +37,6 @@ security:
 tags:
   - name: Datasets
     description: Operations for managing datasets and dataset groups
-  - name: Solutions
-    description: Operations for creating and managing recommendation solutions
-  - name: Campaigns
-    description: Operations for deploying and managing recommendation campaigns
-  - name: Recommenders
-    description: Operations for domain-based recommenders
 paths:
   /:
     post:
