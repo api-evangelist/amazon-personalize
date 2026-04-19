@@ -1,0 +1,7 @@
+{
+  "name": "my-resource",
+  "campaignArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "solutionVersionArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "minProvisionedTPS": 47,
+  "status": "active"
+}

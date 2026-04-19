@@ -1,0 +1,41 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Personalize
+  description: Unified vocabulary for Amazon Personalize APIs.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Personalize API
+    namespace: openapi.yml
+    version: '2018-05-22'
+    baseUrl: https://personalize.{region}.amazonaws.com
+    status: active
+  actions:
+  - name: create
+    method: POST
+    pattern: write
+capability:
+  workflows:
+  - name: Amazon Personalize API Workflow
+    file: capabilities/amazon-personalize-workflow.yaml
+    description: Core API workflow
+    apis:
+    - openapi.yml
+    personas:
+    - Developer
+  personas:
+  - id: developer
+    name: Developer
+    description: Developer using Amazon Personalize APIs
+  domains:
+  - Amazon Personalize
+  - AWS
+crossReference:
+- resource: Amazon Personalize API
+  apis:
+  - openapi.yml
+  workflows:
+  - Amazon Personalize API Workflow
+  personas:
+  - Developer

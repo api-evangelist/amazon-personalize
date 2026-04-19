@@ -1,0 +1,41 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Personalize API
+  description: The Amazon Personalize API enables you to create, manage, and deploy personalization models. You can import interaction data, train recommendation models, create campaigns, and get 
+    real-time recommend
+  tags:
+  - Amazon Personalize
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_SIGV4_AUTH: AWS_SIGV4_AUTH
+capability:
+  consumes:
+  - type: http
+    namespace: openapi.yml
+    baseUri: https://personalize.{region}.amazonaws.com
+    description: The Amazon Personalize API enables you to create, manage, and deploy personalization models. You can
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_SIGV4_AUTH}}'
+      placement: header
+    resources:
+    - name: datasets
+      path: /datasets
+      description: Datasets operations for Amazon Personalize API
+      operations:
+      - name: CreateDatasetGroup
+        method: POST
+        description: Amazon Personalize Create a Dataset Group
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        body:
+          type: json
+          data: {}

@@ -1,0 +1,49 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Personalize API Workflow
+  description: Workflow capability composing Amazon Personalize APIs for developers and operators.
+  tags:
+  - Amazon Personalize
+  - AWS
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_SIGV4_AUTH: AWS_SIGV4_AUTH
+capability:
+  consumes:
+  - import: personalize
+    location: ./shared/personalize.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-personalize-api
+    description: Unified REST API for Amazon Personalize.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Primary Amazon Personalize resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Personalize resources
+        call: openapi.yml.list
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-personalize-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Personalize operations.
+    tools:
+    - name: list-openapi.yml
+      description: List and manage openapi.yml resources
+      hints:
+        readOnly: true
+        openWorld: true
+      call: openapi.yml.list
+      outputParameters:
+      - type: object
+        mapping: $.

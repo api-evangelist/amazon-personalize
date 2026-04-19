@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-personalize/refs/heads/main/json-schema/openapi-campaign-schema.json",
+  "title": "Campaign",
+  "description": "Campaign schema from Amazon Personalize",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "campaignArn": {
+      "type": "string"
+    },
+    "solutionVersionArn": {
+      "type": "string"
+    },
+    "minProvisionedTPS": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

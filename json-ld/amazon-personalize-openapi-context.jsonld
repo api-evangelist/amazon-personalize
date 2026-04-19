@@ -1,0 +1,52 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "personalize": "https://personalize.amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "Campaign": "personalize:Campaign",
+    "CreateDatasetGroupRequest": "personalize:CreateDatasetGroupRequest",
+    "DatasetGroup": "personalize:DatasetGroup",
+    "Solution": "personalize:Solution",
+    "campaignArn": {
+      "@id": "personalize:campaignArn",
+      "@type": "xsd:string"
+    },
+    "creationDateTime": {
+      "@id": "personalize:creationDateTime",
+      "@type": "xsd:dateTime"
+    },
+    "datasetGroupArn": {
+      "@id": "personalize:datasetGroupArn",
+      "@type": "xsd:string"
+    },
+    "domain": {
+      "@id": "personalize:domain",
+      "@type": "xsd:string"
+    },
+    "minProvisionedTPS": {
+      "@id": "personalize:minProvisionedTPS",
+      "@type": "xsd:integer"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "recipeArn": {
+      "@id": "personalize:recipeArn",
+      "@type": "xsd:string"
+    },
+    "solutionArn": {
+      "@id": "personalize:solutionArn",
+      "@type": "xsd:string"
+    },
+    "solutionVersionArn": {
+      "@id": "personalize:solutionVersionArn",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "personalize:status",
+      "@type": "xsd:string"
+    }
+  }
+}

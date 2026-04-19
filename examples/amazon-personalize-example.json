@@ -1,0 +1,22 @@
+{
+  "name": "my-resource",
+  "datasetGroupArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "status": "active",
+  "domain": "VIDEO_ON_DEMAND",
+  "kmsKeyArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "roleArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "creationDateTime": "2025-03-15T14:30:00Z",
+  "lastUpdatedDateTime": "2025-03-15T14:30:00Z",
+  "datasets": [
+    "example-ref"
+  ],
+  "solutions": [
+    "example-ref"
+  ],
+  "campaigns": [
+    "example-ref"
+  ],
+  "recommenders": [
+    "example-ref"
+  ]
+}

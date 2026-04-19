@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-personalize/refs/heads/main/json-structure/openapi-dataset-group-structure.json",
+  "name": "DatasetGroup",
+  "description": "DatasetGroup schema from Amazon Personalize",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "datasetGroupArn": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "creationDateTime": {
+      "type": "datetime"
+    }
+  }
+}

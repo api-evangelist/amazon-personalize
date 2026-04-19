@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-personalize/refs/heads/main/json-schema/openapi-solution-schema.json",
+  "title": "Solution",
+  "description": "Solution schema from Amazon Personalize",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "solutionArn": {
+      "type": "string"
+    },
+    "recipeArn": {
+      "type": "string"
+    },
+    "datasetGroupArn": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

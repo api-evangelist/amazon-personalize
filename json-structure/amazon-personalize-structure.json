@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://schemas.apievangelist.com/amazon-personalize/dataset-group-definition",
+  "name": "Amazon Personalize Dataset Group Definition",
+  "description": "Schema defining the structure of an Amazon Personalize dataset group resource, including datasets, solutions, campaigns, and recommenders for building personalized recommendation systems.",
+  "type": "object",
+  "required": [
+    "name"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the dataset group.",
+      "minLength": 1,
+      "maxLength": 63,
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]*$"
+    },
+    "datasetGroupArn": {
+      "type": "string",
+      "description": "The Amazon Resource Name of the dataset group."
+    },
+    "status": {
+      "type": "string",
+      "description": "The current status of the dataset group."
+    },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "ECOMMERCE",
+        "VIDEO_ON_DEMAND"
+      ],
+      "description": "The domain of the dataset group for domain-based recommenders."
+    },
+    "kmsKeyArn": {
+      "type": "string",
+      "description": "The ARN of the KMS key used to encrypt the datasets."
+    },
+    "roleArn": {
+      "type": "string",
+      "description": "The ARN of the IAM role that has permissions to access the datasets."
+    },
+    "creationDateTime": {
+      "type": "datetime",
+      "description": "The creation date and time of the dataset group."
+    },
+    "lastUpdatedDateTime": {
+      "type": "datetime",
+      "description": "The last updated date and time of the dataset group."
+    },
+    "datasets": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Dataset"
+      },
+      "description": "The datasets in the dataset group."
+    },
+    "solutions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Solution"
+      },
+      "description": "The trained solutions in the dataset group."
+    },
+    "campaigns": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Campaign"
+      },
+      "description": "The deployed campaigns for real-time recommendations."
+    },
+    "recommenders": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Recommender"
+      },
+      "description": "Domain-based recommenders in the dataset group."
+    }
+  },
+  "definitions": {
+    "Dataset": {
+      "type": "object",
+      "description": "A dataset containing interaction, user, or item data for training.",
+      "required": [
+        "name",
+        "datasetType"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the dataset."
+        },
+        "datasetArn": {
+          "type": "string",
+          "description": "The ARN of the dataset."
+        },
+        "datasetGroupArn": {
+          "type": "string",
+          "description": "The ARN of the dataset group."
+        },
+        "datasetType": {
+          "type": "string",
+          "enum": [
+            "Interactions",
+            "Items",
+            "Users",
+            "Actions",
+            "Action_Interactions"
+          ],
+          "description": "The type of dataset."
+        },
+        "schemaArn": {
+          "type": "string",
+          "description": "The ARN of the schema associated with the dataset."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the dataset."
+        },
+        "creationDateTime": {
+          "type": "datetime"
+        }
+      },
+      "name": "Dataset"
+    },
+    "Solution": {
+      "type": "object",
+      "description": "A trained model that generates recommendations.",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the solution."
+        },
+        "solutionArn": {
+          "type": "string",
+          "description": "The ARN of the solution."
+        },
+        "recipeArn": {
+          "type": "string",
+          "description": "The ARN of the recipe used to create the solution."
+        },
+        "datasetGroupArn": {
+          "type": "string",
+          "description": "The ARN of the dataset group that provides the training data."
+        },
+        "performAutoML": {
+          "type": "boolean",
+          "description": "Whether to perform automated ML to find the best recipe."
+        },
+        "performHPO": {
+          "type": "boolean",
+          "description": "Whether to perform hyperparameter optimization."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the solution."
+        },
+        "solutionConfig": {
+          "type": "object",
+          "properties": {
+            "eventValueThreshold": {
+              "type": "string"
+            },
+            "algorithmHyperParameters": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            "featureTransformationParameters": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "name": "Solution"
+    },
+    "Campaign": {
+      "type": "object",
+      "description": "A deployed solution version for real-time recommendations.",
+      "required": [
+        "name",
+        "solutionVersionArn"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the campaign."
+        },
+        "campaignArn": {
+          "type": "string",
+          "description": "The ARN of the campaign."
+        },
+        "solutionVersionArn": {
+          "type": "string",
+          "description": "The ARN of the deployed solution version."
+        },
+        "minProvisionedTPS": {
+          "type": "int32",
+          "minimum": 1,
+          "description": "The minimum provisioned transactions per second."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the campaign."
+        },
+        "creationDateTime": {
+          "type": "datetime"
+        }
+      },
+      "name": "Campaign"
+    },
+    "Recommender": {
+      "type": "object",
+      "description": "A domain-based recommender for specific use cases.",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the recommender."
+        },
+        "recommenderArn": {
+          "type": "string",
+          "description": "The ARN of the recommender."
+        },
+        "datasetGroupArn": {
+          "type": "string",
+          "description": "The ARN of the dataset group."
+        },
+        "recipeArn": {
+          "type": "string",
+          "description": "The ARN of the recipe for the recommender."
+        },
+        "status": {
+          "type": "string",
+          "description": "The status of the recommender."
+        },
+        "creationDateTime": {
+          "type": "datetime"
+        }
+      },
+      "name": "Recommender"
+    }
+  }
+}

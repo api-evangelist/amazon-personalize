@@ -1,0 +1,7 @@
+{
+  "name": "my-resource",
+  "solutionArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "recipeArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "datasetGroupArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "status": "active"
+}
