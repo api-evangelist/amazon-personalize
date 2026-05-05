@@ -1,0 +1,13 @@
+{
+  "repo": "amazon-personalize",
+  "feeds": [
+    {
+      "source": "https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/",
+      "feed_url": "https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/feed/",
+      "saved": 10,
+      "title": "Amazon Personalize \u2013 Artificial Intelligence"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:21:40Z"
+}
