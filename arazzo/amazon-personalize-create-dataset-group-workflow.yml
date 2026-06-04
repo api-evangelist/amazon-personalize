@@ -1,0 +1,62 @@
+arazzo: 1.0.1
+info:
+  title: Amazon Personalize Create a Dataset Group
+  summary: Create an empty Amazon Personalize dataset group for organizing training datasets.
+  description: >-
+    The foundational Amazon Personalize provisioning step. A dataset group is
+    the top-level container that holds the interaction, item, and user datasets
+    a recommendation model is later trained on, so every Personalize integration
+    begins by creating one. This workflow accepts a dataset group name and an
+    optional managed domain, issues the AWS JSON 1.1 CreateDatasetGroup call with
+    the documented X-Amz-Target header, and returns the ARN of the newly created
+    dataset group. Each step spells out its request inline so the flow can be
+    read and executed without opening the underlying OpenAPI description.
+  version: 1.0.0
+sourceDescriptions:
+- name: amazonPersonalizeApi
+  url: ../openapi/amazon-personalize-openapi.yml
+  type: openapi
+workflows:
+- workflowId: create-dataset-group
+  summary: Create a single Amazon Personalize dataset group and return its ARN.
+  description: >-
+    Submits a CreateDatasetGroup request with the supplied name and optional
+    domain, then returns the dataset group ARN that downstream Personalize
+    resources (datasets, solutions, campaigns) are attached to.
+  inputs:
+    type: object
+    required:
+    - name
+    properties:
+      name:
+        type: string
+        description: The name of the dataset group to create.
+      domain:
+        type: string
+        enum:
+        - ECOMMERCE
+        - VIDEO_ON_DEMAND
+        description: >-
+          Optional managed domain for the dataset group. Omit to create a
+          custom (non-domain) dataset group.
+  steps:
+  - stepId: createDatasetGroup
+    description: >-
+      Create an empty dataset group that will organize the datasets used for
+      training a recommendation model.
+    operationId: CreateDatasetGroup
+    parameters:
+    - name: X-Amz-Target
+      in: header
+      value: AmazonPersonalize.CreateDatasetGroup
+    requestBody:
+      contentType: application/x-amz-json-1.1
+      payload:
+        name: $inputs.name
+        domain: $inputs.domain
+    successCriteria:
+    - condition: $statusCode == 200
+    outputs:
+      datasetGroupArn: $response.body#/datasetGroupArn
+  outputs:
+    datasetGroupArn: $steps.createDatasetGroup.outputs.datasetGroupArn

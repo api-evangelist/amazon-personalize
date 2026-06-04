@@ -55,6 +55,12 @@ apis:
   - type: NaftikoCapability
     url: capabilities/amazon-personalize-datasets.yaml
 common:
+- type: ArazzoWorkflows
+  url: arazzo/
+  workflows:
+  - url: arazzo/amazon-personalize-create-dataset-group-workflow.yml
+    name: Amazon Personalize Create a Dataset Group
+    summary: Create an empty Amazon Personalize dataset group for organizing training datasets.
 - type: Blog
   url: https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/
 - type: Support
