@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon Personalize API",
+    "version": "2018-05-22"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Datasets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon Personalize Create a Dataset Group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://personalize.{region}.amazonaws.com/",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates an empty dataset group for organizing datasets used for training."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

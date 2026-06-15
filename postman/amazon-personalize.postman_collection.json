@@ -1,0 +1,142 @@
+{
+  "info": {
+    "_postman_id": "d574ac5d-3ff0-4d8f-94b9-0075b47a1d1e",
+    "name": "Amazon Personalize API",
+    "description": "The Amazon Personalize API enables you to create, manage, and deploy personalization models. You can import interaction data, train recommendation models, create campaigns, and get real-time recommendations through this interface.\n\nContact Support:\n Name: AWS Support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-06-05T15:04:42.000Z",
+    "updatedAt": "2026-06-05T15:04:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d574ac5d-3ff0-4d8f-94b9-0075b47a1d1e"
+  },
+  "item": [
+    {
+      "name": "/",
+      "item": [
+        {
+          "name": "Amazon Personalize Create a Dataset Group",
+          "id": "f101257d-c9da-4544-8c91-774b0c2bb3d9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/x-amz-json-1.1"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"domain\": \"ECOMMERCE\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            },
+            "description": "Creates an empty dataset group for organizing datasets used for training."
+          },
+          "response": [
+            {
+              "id": "a6c4ee38-8ecc-4453-8ef3-2f2dd870879c",
+              "name": "Dataset group created successfully",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/x-amz-json-1.1"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"domain\": \"ECOMMERCE\"\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"datasetGroupArn\": \"<string>\"\n}",
+              "createdAt": "2026-06-05T15:04:43.000Z",
+              "updatedAt": "2026-06-05T15:04:43.000Z",
+              "uid": "35240-a6c4ee38-8ecc-4453-8ef3-2f2dd870879c"
+            }
+          ],
+          "createdAt": "2026-06-05T15:04:43.000Z",
+          "updatedAt": "2026-06-05T15:04:43.000Z",
+          "uid": "35240-f101257d-c9da-4544-8c91-774b0c2bb3d9"
+        }
+      ],
+      "id": "106d6d43-a4e8-40c4-a3f7-1c32786cb491",
+      "createdAt": "2026-06-05T15:04:43.000Z",
+      "updatedAt": "2026-06-05T15:04:43.000Z",
+      "uid": "35240-106d6d43-a4e8-40c4-a3f7-1c32786cb491"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "https://personalize.{{region}}.amazonaws.com"
+    }
+  ]
+}
