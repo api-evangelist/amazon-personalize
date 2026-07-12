@@ -55,6 +55,14 @@ apis:
       - type: RateLimits
         url: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
 common:
+  - type: TrustCenter
+    url: security/amazon-personalize-trust-center.yml
+  - type: VulnerabilityDisclosure
+    url: security/amazon-personalize-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/amazon-personalize-domain-security.yml
+  - type: Authentication
+    url: authentication/amazon-personalize-authentication.yml
   - type: PostmanWorkspace
     url: https://www.postman.com/kinlaneapi/amazon-personalize/overview
   - type: Arazzo
