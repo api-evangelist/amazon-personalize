@@ -55,6 +55,8 @@ apis:
       - type: RateLimits
         url: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-personalize-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-personalize-trust-center.yml
   - type: VulnerabilityDisclosure
