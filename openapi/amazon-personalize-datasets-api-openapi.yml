@@ -1,11 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Amazon Personalize API
-  description: >-
-    The Amazon Personalize API enables you to create, manage, and deploy
-    personalization models. You can import interaction data, train
-    recommendation models, create campaigns, and get real-time
-    recommendations through this interface.
+  title: Amazon Personalize Datasets API
+  description: The Amazon Personalize API enables you to create, manage, and deploy personalization models. You can import interaction data, train recommendation models, create campaigns, and get real-time recommendations through this interface.
   version: '2018-05-22'
   contact:
     name: AWS Support
@@ -71,12 +67,6 @@ paths:
         delay: 0
         dispatcher: FALLBACK
 components:
-  securitySchemes:
-    sigv4:
-      type: apiKey
-      name: Authorization
-      in: header
-      description: AWS Signature Version 4
   schemas:
     CreateDatasetGroupRequest:
       type: object
@@ -92,43 +82,9 @@ components:
           - ECOMMERCE
           - VIDEO_ON_DEMAND
           description: The domain of the dataset group
-    DatasetGroup:
-      type: object
-      properties:
-        name:
-          type: string
-        datasetGroupArn:
-          type: string
-        status:
-          type: string
-        domain:
-          type: string
-        creationDateTime:
-          type: string
-          format: date-time
-    Solution:
-      type: object
-      properties:
-        name:
-          type: string
-        solutionArn:
-          type: string
-        recipeArn:
-          type: string
-        datasetGroupArn:
-          type: string
-        status:
-          type: string
-    Campaign:
-      type: object
-      properties:
-        name:
-          type: string
-        campaignArn:
-          type: string
-        solutionVersionArn:
-          type: string
-        minProvisionedTPS:
-          type: integer
-        status:
-          type: string
+  securitySchemes:
+    sigv4:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: AWS Signature Version 4
