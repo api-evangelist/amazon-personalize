@@ -4,6 +4,19 @@ description: >-
   recommendations for customers using their applications.
 url: https://aws.amazon.com/personalize/
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
   - AI
@@ -16,44 +29,36 @@ tags:
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: Amazon Personalize API
-    description: >-
-      The Amazon Personalize API enables you to create, train, and deploy machine learning models that generate
-      personalized recommendations for your users.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/personalize/
-    baseURL: https://personalize.amazonaws.com
-    tags:
-      - Machine Learning
-      - Personalization
-      - Recommendations
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/personalize/latest/dg/what-is-personalize.html
-      - type: OpenAPI
-        url: https://docs.aws.amazon.com/personalize/latest/dg/API_Reference.html
-      - type: OpenAPI
-        url: openapi/amazon-personalize-openapi.yml
-      - type: OpenAPI
-        url: openapi/amazon-personalize-openapi.yml
-      - type: JSONSchema
-        url: json-schema/amazon-personalize-schema.json
-      - type: JSONLD
-        url: json-ld/amazon-personalize-context.jsonld
-      - type: Pricing
-        url: https://aws.amazon.com/personalize/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/personalize/getting-started/
-      - type: FAQ
-        url: https://aws.amazon.com/personalize/faqs/
-      - type: Features
-        url: https://aws.amazon.com/personalize/features/
-      - type: Developer Guide
-        url: https://docs.aws.amazon.com/personalize/latest/dg/what-is-personalize.html
-      - type: APIReference
-        url: https://docs.aws.amazon.com/personalize/latest/dg/API_Reference.html
-      - type: RateLimits
-        url: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
+- aid: amazon-personalize:amazon-personalize-datasets-api
+  name: Amazon Personalize Datasets API
+  description: Operations for managing datasets and dataset groups
+  humanURL: https://aws.amazon.com/personalize/
+  baseURL: https://personalize.amazonaws.com
+  tags:
+  - Datasets
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-personalize-datasets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/personalize/latest/dg/what-is-personalize.html
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-personalize-context.jsonld
+  - type: Pricing
+    url: https://aws.amazon.com/personalize/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/personalize/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/personalize/faqs/
+  - type: Features
+    url: https://aws.amazon.com/personalize/features/
+  - type: Developer Guide
+    url: https://docs.aws.amazon.com/personalize/latest/dg/what-is-personalize.html
+  - type: APIReference
+    url: https://docs.aws.amazon.com/personalize/latest/dg/API_Reference.html
+  - type: RateLimits
+    url: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
 common:
   - type: AgenticAccess
     url: agentic-access/amazon-personalize-agentic-access.yml
