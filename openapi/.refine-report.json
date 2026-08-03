@@ -1,0 +1,14 @@
+{
+  "provider": "amazon-personalize",
+  "sources": [
+    "amazon-personalize-datasets-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-personalize-datasets-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
