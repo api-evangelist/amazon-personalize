@@ -4,6 +4,7 @@ description: >-
   recommendations for customers using their applications.
 url: https://aws.amazon.com/personalize/
 type: Index
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
