@@ -13,8 +13,8 @@ info:
     read and executed without opening the underlying OpenAPI description.
   version: 1.0.0
 sourceDescriptions:
-- name: amazonPersonalizeApi
-  url: ../openapi/amazon-personalize-openapi.yml
+- name: datasetsApi
+  url: ../openapi/amazon-personalize-datasets-api-openapi.yml
   type: openapi
 workflows:
 - workflowId: create-dataset-group
