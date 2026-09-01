@@ -4,11 +4,16 @@
     {
       "source": "https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/",
       "feed_url": "https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/feed/",
-      "title": "Amazon Personalize \u2013 Artificial Intelligence",
+      "title": "Amazon Personalize – Artificial Intelligence",
       "saved": 0,
-      "method": "feed"
+      "method": "feed",
+      "nature": "vendor-blog",
+      "nature_basis": "path_blog"
     }
   ],
   "post_count": 28,
-  "fetched": "2026-08-30T22:05:13Z"
+  "fetched": "2026-08-30T22:05:13Z",
+  "feed_nature": "vendor-blog",
+  "feed_nature_basis": "path_blog",
+  "feed_nature_note": "Whether these posts are the vendor publishing or its support community, decided on the URL path grammar of the saved posts -- not the hostname, which carries both on Khoros, and not author diversity, which flags large vendor blogs as forums. 'undetermined' means undetermined."
 }
