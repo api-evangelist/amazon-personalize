@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Amazon Personalize Datasets API
   description: The Amazon Personalize API enables you to create, manage, and deploy personalization models. You can import interaction data, train recommendation models, create campaigns, and get real-time recommendations through this interface.
