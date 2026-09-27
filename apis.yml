@@ -36,7 +36,7 @@ tags:
   - Artificial Intelligence
   - AWS
   - Customer Experience
-  - Machine-Learning
+  - Machine Learning
   - Personalization
   - Recommendations
 tags_raw:
@@ -47,6 +47,7 @@ tags_raw:
   - ML
   - Personalization
   - Recommendations
+  - Machine-Learning
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
@@ -172,5 +173,5 @@ maintainers:
     email: kin@apievangelist.com
     url: https://apievangelist.com
 include: []
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
