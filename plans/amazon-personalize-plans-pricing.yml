@@ -1,0 +1,378 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/personalize/pricing/
+sources:
+- https://aws.amazon.com/personalize/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: per-call
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: AWS Personalize usage pricing page; also includes a two-month free trial (20 GB/month data, 5 million
+  interactions/month training, 50,000-180,000 real-time recommendation requests/month).
+plan_count: 24
+currency: USD
+plans:
+- name: Data ingestion
+  price_text: $0.05 per GB of data uploaded to Amazon Personalize
+  price: 0.05
+  currency: USD
+  period: per-use
+  unit: per GB
+- name: Training (v2 recipes)
+  price_text: $0.002 per 1,000 interactions ingested for training
+  price: 0.002
+  currency: USD
+  period: per-use
+  unit: per 1,000 interactions
+- name: Inference (v2 recipes)
+  price_text: $0.15 per 1,000 recommendation requests for both real-time recommendations and batch recommendations
+  price: 0.15
+  currency: USD
+  period: per-use
+  unit: per 1,000 requests
+- name: Training (custom solutions)
+  price_text: $0.24 per training hour
+  price: 0.24
+  currency: USD
+  period: per-use
+  unit: per training hour
+- name: Real-time recommendations - first 72 million requests per month
+  price_text: $0.0556
+  price: 0.0556
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendation requests
+- name: Real-time recommendations - next 648 million requests per month
+  price_text: $0.0278
+  price: 0.0278
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendation requests
+- name: Real-time recommendations - over 720 million requests per month
+  price_text: $0.0139
+  price: 0.0139
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendation requests
+- name: Item metadata surcharge (campaigns)
+  price_text: $0.0167 per 1,000 recommendation requests
+  price: 0.0167
+  currency: USD
+  period: per-use
+  unit: per 1,000 requests
+- name: Batch recommendations - first 20 million per month per eligible Region
+  price_text: $0.067
+  price: 0.067
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Batch recommendations - next 180 million per month per eligible Region
+  price_text: $0.058
+  price: 0.058
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Batch recommendations - over 200 million per month per eligible Region
+  price_text: $0.050
+  price: 0.05
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Content Generator theme
+  price_text: $1 per theme output
+  price: 1
+  currency: USD
+  period: per-use
+  unit: per theme
+- name: Recommender hours - first 100,000 users
+  price_text: $0.375
+  price: 0.375
+  currency: USD
+  period: per-use
+  unit: per 100,000 users per hour
+  included_quota: 4,000 free recommendations per hour
+- name: Recommender hours - next 900,000 users
+  price_text: $0.045
+  price: 0.045
+  currency: USD
+  period: per-use
+  unit: per 100,000 users per hour
+  included_quota: 6,000 free recommendations per hour
+- name: Recommender hours - next 9 million users
+  price_text: $0.018
+  price: 0.018
+  currency: USD
+  period: per-use
+  unit: per 100,000 users per hour
+  included_quota: 9,000 free recommendations per hour
+- name: Recommender hours - over 10 million users
+  price_text: $0.005
+  price: 0.005
+  currency: USD
+  period: per-use
+  unit: per 100,000 users per hour
+  included_quota: 14,000 free recommendations per hour
+- name: Recommender item metadata surcharge
+  price_text: $0.1 per hour
+  price: 0.1
+  currency: USD
+  period: per-use
+  unit: per hour
+- name: Additional recommendations - first 100,000 per hour per eligible Region
+  price_text: $0.0833
+  price: 0.0833
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Additional recommendations - next 900,000 per hour per eligible Region
+  price_text: $0.0417
+  price: 0.0417
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Additional recommendations - over 1 million per hour per eligible Region
+  price_text: $0.0208
+  price: 0.0208
+  currency: USD
+  period: per-use
+  unit: per 1,000 recommendations
+- name: Batch segments - first 100,000 users
+  price_text: $0.016
+  price: 0.016
+  currency: USD
+  period: per-use
+  unit: per 1,000 users per segment
+- name: Batch segments - next 900,000 users
+  price_text: $0.008
+  price: 0.008
+  currency: USD
+  period: per-use
+  unit: per 1,000 users per segment
+- name: Batch segments - next 9 million users
+  price_text: $0.004
+  price: 0.004
+  currency: USD
+  period: per-use
+  unit: per 1,000 users per segment
+- name: Batch segments - next 40 million users
+  price_text: $0.001
+  price: 0.001
+  currency: USD
+  period: per-use
+  unit: per 1,000 users per segment
+rate_limit_statements:
+- Amazon Personalize charges a minimum of 1 recommendation request transaction per second (TPS) for all
+  active campaigns by default
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - seat
+  - subscription
+  units:
+  - compute
+  - data
+  - request
+  - seat
+  plans:
+  - name: Data ingestion
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Training (v2 recipes)
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Inference (v2 recipes)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - other
+  - name: Training (custom solutions)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Real-time recommendations - first 72 million requests per month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - other
+  - name: Real-time recommendations - next 648 million requests per month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - other
+  - name: Real-time recommendations - over 720 million requests per month
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - other
+  - name: Item metadata surcharge (campaigns)
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - request
+    periods:
+    - other
+  - name: Batch recommendations - first 20 million per month per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Batch recommendations - next 180 million per month per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Batch recommendations - over 200 million per month per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Content Generator theme
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Recommender hours - first 100,000 users
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Recommender hours - next 900,000 users
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Recommender hours - next 9 million users
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Recommender hours - over 10 million users
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Recommender item metadata surcharge
+    access: other
+    model: hybrid
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Additional recommendations - first 100,000 per hour per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Additional recommendations - next 900,000 per hour per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Additional recommendations - over 1 million per hour per eligible Region
+    access: other
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - other
+  - name: Batch segments - first 100,000 users
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - other
+  - name: Batch segments - next 900,000 users
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - other
+  - name: Batch segments - next 9 million users
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - other
+  - name: Batch segments - next 40 million users
+    access: other
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - other
