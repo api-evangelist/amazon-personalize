@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/personalize/pricing/
+name: Amazon Personalize API Plans
 sources:
 - https://aws.amazon.com/personalize/pricing/
 provenance:
@@ -172,7 +173,7 @@ rate_limit_statements:
 - Amazon Personalize charges a minimum of 1 recommendation request transaction per second (TPS) for all
   active campaigns by default
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid

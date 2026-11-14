@@ -1,7 +1,8 @@
 name: Amazon Personalize
-description: >-
-  Amazon Personalize is a fully managed machine learning service that enables developers to create individualized
-  recommendations for customers using their applications.
+description: Amazon Personalize is a fully managed machine learning service that enables developers to create individualized recommendations for
+  customers using their applications. Its control-plane API manages datasets, schemas, import and export jobs, solutions, campaigns, recommenders
+  and filters, while the separate Personalize Runtime and Personalize Events APIs serve real-time recommendations and ingest interaction events,
+  all signed with AWS Signature Version 4.
 url: https://aws.amazon.com/personalize/
 type: Index
 deliveryModel:
@@ -24,32 +25,177 @@ accessModel:
   try_now: false
   public: false
   label: Paid
-  confidence: medium
+  confidence: high
   source:
   - plans
   - authentication
+  - rate-limits
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
-  - Artificial Intelligence
-  - Amazon Web Services
-  - Customer Experience
-  - Machine Learning
-  - Personalization
-  - Recommendations
+- Artificial Intelligence
+- Amazon Web Services
+- Customer Experience
+- Machine Learning
+- Personalization
+- Recommendations
 tags_raw:
-  - AI
-  - AWS
-  - Customer Experience
-  - Machine Learning
-  - ML
-  - Personalization
-  - Recommendations
-  - Machine-Learning
+- AI
+- AWS
+- Customer Experience
+- Machine Learning
+- ML
+- Personalization
+- Recommendations
+- Machine-Learning
 created: '2024-01-15'
 modified: '2026-05-19'
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+  url: https://apievangelist.com
+common:
+- type: GettingStarted
+  url: https://developer.amazon.com/frustration-free-setup
+- type: Spectral
+  url: rules/amazon-personalize-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-personalize-rules.yml
+- type: Spectral
+  url: rules/amazon-personalize-jsonschema-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-personalize-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-personalize-data-model.yml
+- type: ChangeLog
+  url: changelog/amazon-personalize-changelog.yml
+- type: Conventions
+  url: conventions/amazon-personalize-conventions.yml
+- type: StatusPage
+  url: https://health.aws.amazon.com/health/status
+- type: Lifecycle
+  url: lifecycle/amazon-personalize-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-personalize-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-personalize-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-personalize-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-personalize-security.txt
+- type: WellKnown
+  url: well-known/amazon-personalize-well-known.yml
+- type: Hosts
+  url: hosts/amazon-personalize-hosts.yml
+- type: IntegrationEdges
+  url: integrations/amazon-personalize-integration-edges.yml
+- type: Vendors
+  url: vendors/amazon-personalize-vendors.yml
+- type: Packages
+  url: packages/amazon-personalize-packages.yml
+- type: SignUp
+  url: https://signin.aws.amazon.com/signup?request_type=builderId
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: DeveloperPortal
+  url: https://developer.amazon.com/
+- type: CapabilityMap
+  url: capabilities/amazon-personalize-capability-edges.yml
+  name: Amazon Personalize Business Capability Map
+- type: Plans
+  url: plans/amazon-personalize-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-personalize-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-personalize-finops.yml
+- type: AgenticAccess
+  url: agentic-access/amazon-personalize-agentic-access.yml
+- type: TrustCenter
+  url: security/amazon-personalize-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-personalize-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-personalize-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-personalize-authentication.yml
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-personalize/overview
+- type: Arazzo
+  url: arazzo/amazon-personalize-create-dataset-group-workflow.yml
+  name: Amazon Personalize Create a Dataset Group
+- type: Blog
+  url: https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/
+- type: Support
+  url: https://aws.amazon.com/premiumsupport/
+- type: Console
+  url: https://console.aws.amazon.com/personalize/
+- type: CLI Reference
+  url: https://docs.aws.amazon.com/cli/latest/reference/personalize/
+- type: SDKs
+  url: https://aws.amazon.com/tools/
+- type: Service Status
+  url: https://status.aws.amazon.com/
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: TermsOfService
+  url: https://aws.amazon.com/service-terms/
+- type: Website
+  url: https://aws.amazon.com/personalize/
+- type: Documentation
+  url: https://docs.aws.amazon.com/personalize/
+- type: Pricing
+  url: https://aws.amazon.com/personalize/pricing/
+- type: FAQ
+  url: https://aws.amazon.com/personalize/faqs/
+- type: PrivacyPolicy
+  url: https://aws.amazon.com/privacy/
+- type: Signup
+  url: https://portal.aws.amazon.com/billing/signup
+- type: GitHubOrganization
+  url: https://github.com/aws
+- type: StackOverflow
+  url: https://stackoverflow.com/questions/tagged/amazon-personalize
+- type: Code Examples
+  url: https://docs.aws.amazon.com/code-library/latest/ug/personalize_code_examples.html
+- type: SpectralRules
+  url: rules/amazon-personalize-spectral-rules.yml
+- type: Vocabulary
+  url: vocabulary/amazon-personalize-vocabulary.yaml
+- type: JSONLD
+  url: json-ld/amazon-personalize-context.jsonld
+- type: JSONLD
+  url: json-ld/amazon-personalize-openapi-context.jsonld
+- type: JSONSchema
+  url: json-schema/amazon-personalize-schema.json
+  title: Amazon Personalize
+- type: JSONSchema
+  url: json-schema/openapi-campaign-schema.json
+  title: Openapi Campaign
+- type: JSONSchema
+  url: json-schema/openapi-create-dataset-group-request-schema.json
+  title: Openapi Create Dataset Group Request
+- type: JSONSchema
+  url: json-schema/openapi-dataset-group-schema.json
+  title: Openapi Dataset Group
+- type: JSONSchema
+  url: json-schema/openapi-solution-schema.json
+  title: Openapi Solution
+- type: Integrations
+  url: https://aws.amazon.com/marketplace
+- type: UsageTerms
+  url: terms/amazon-personalize-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-personalize-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-personalize-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-personalize-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-personalize-ai-preferences.yml
 apis:
 - aid: amazon-personalize:amazon-personalize-datasets-api
   name: Amazon Personalize Datasets API
@@ -69,8 +215,6 @@ apis:
     url: json-ld/amazon-personalize-context.jsonld
   - type: Pricing
     url: https://aws.amazon.com/personalize/pricing/
-  - type: GettingStarted
-    url: https://aws.amazon.com/personalize/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/personalize/faqs/
   - type: Features
@@ -83,9 +227,7 @@ apis:
     url: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
 - aid: amazon-personalize:amazon-personalize-batch-inference-job-api
   name: Amazon Personalize Personalize Batch Inference Job API
-  description: >-
-    The Personalize Batch Inference Job API from Amazon Personalize — 3 operation(s) for personalize batch
-    inference job.
+  description: The Personalize Batch Inference Job API from Amazon Personalize — 3 operation(s) for personalize batch inference job.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -93,11 +235,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-batch-inference-job-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-batch-inference-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-batch-inference-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-batch-inference-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-batch-inference-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-batch-inference-job-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-batch-inference-job-response-schema.json
 - aid: amazon-personalize:amazon-personalize-batch-segment-job-api
   name: Amazon Personalize Personalize Batch Segment Job API
-  description: >-
-    The Personalize Batch Segment Job API from Amazon Personalize — 3 operation(s) for personalize batch
-    segment job.
+  description: The Personalize Batch Segment Job API from Amazon Personalize — 3 operation(s) for personalize batch segment job.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -105,10 +257,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-batch-segment-job-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-batch-segment-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-batch-segment-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-batch-segment-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-batch-segment-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-batch-segment-job-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-batch-segment-job-response-schema.json
 - aid: amazon-personalize:amazon-personalize-campaign-api
   name: Amazon Personalize Personalize Campaign API
-  description: >-
-    The Personalize Campaign API from Amazon Personalize — 5 operation(s) for personalize campaign.
+  description: The Personalize Campaign API from Amazon Personalize — 5 operation(s) for personalize campaign.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -116,11 +279,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-campaign-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-campaign-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-update-campaign-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-campaigns-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-campaigns-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-campaign-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-campaign-request-schema.json
 - aid: amazon-personalize:amazon-personalize-data-deletion-job-api
   name: Amazon Personalize Personalize Data Deletion Job API
-  description: >-
-    The Personalize Data Deletion Job API from Amazon Personalize — 3 operation(s) for personalize data
-    deletion job.
+  description: The Personalize Data Deletion Job API from Amazon Personalize — 3 operation(s) for personalize data deletion job.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -128,11 +301,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-data-deletion-job-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-data-deletion-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-data-deletion-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-data-deletion-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-data-deletion-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-data-deletion-job-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-data-deletion-job-response-schema.json
 - aid: amazon-personalize:amazon-personalize-dataset-export-job-api
   name: Amazon Personalize Personalize Dataset Export Job API
-  description: >-
-    The Personalize Dataset Export Job API from Amazon Personalize — 3 operation(s) for personalize dataset
-    export job.
+  description: The Personalize Dataset Export Job API from Amazon Personalize — 3 operation(s) for personalize dataset export job.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -140,11 +323,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-dataset-export-job-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-export-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-export-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-export-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-dataset-export-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-export-job-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-dataset-export-job-response-schema.json
 - aid: amazon-personalize:amazon-personalize-dataset-group-api
   name: Amazon Personalize Personalize Dataset Group API
-  description: >-
-    The Personalize Dataset Group API from Amazon Personalize — 4 operation(s) for personalize dataset
-    group.
+  description: The Personalize Dataset Group API from Amazon Personalize — 4 operation(s) for personalize dataset group.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -152,11 +345,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-dataset-group-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-groups-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-groups-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-group-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-dataset-group-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-dataset-group-request-schema.json
 - aid: amazon-personalize:amazon-personalize-dataset-import-job-api
   name: Amazon Personalize Personalize Dataset Import Job API
-  description: >-
-    The Personalize Dataset Import Job API from Amazon Personalize — 3 operation(s) for personalize dataset
-    import job.
+  description: The Personalize Dataset Import Job API from Amazon Personalize — 3 operation(s) for personalize dataset import job.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -164,10 +367,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-dataset-import-job-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-import-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-import-jobs-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-dataset-import-jobs-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-dataset-import-job-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-dataset-import-job-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-dataset-import-job-response-schema.json
 - aid: amazon-personalize:amazon-personalize-event-tracker-api
   name: Amazon Personalize Personalize Event Tracker API
-  description: >-
-    The Personalize Event Tracker API from Amazon Personalize — 4 operation(s) for personalize event tracker.
+  description: The Personalize Event Tracker API from Amazon Personalize — 4 operation(s) for personalize event tracker.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -175,10 +389,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-event-tracker-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-event-tracker-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-event-trackers-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-event-trackers-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-event-tracker-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-event-tracker-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-event-tracker-request-schema.json
 - aid: amazon-personalize:amazon-personalize-filter-api
   name: Amazon Personalize Personalize Filter API
-  description: >-
-    The Personalize Filter API from Amazon Personalize — 4 operation(s) for personalize filter.
+  description: The Personalize Filter API from Amazon Personalize — 4 operation(s) for personalize filter.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -186,11 +411,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-filter-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-filter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-filters-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-filters-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-filter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-filter-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-filter-response-schema.json
 - aid: amazon-personalize:amazon-personalize-metric-attribution-api
   name: Amazon Personalize Personalize Metric Attribution API
-  description: >-
-    The Personalize Metric Attribution API from Amazon Personalize — 5 operation(s) for personalize metric
-    attribution.
+  description: The Personalize Metric Attribution API from Amazon Personalize — 5 operation(s) for personalize metric attribution.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -198,10 +433,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-metric-attribution-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-metric-attribution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-update-metric-attribution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-metric-attributions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-metric-attributions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-metric-attribution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-metric-attribution-request-schema.json
 - aid: amazon-personalize:amazon-personalize-operations-api
   name: Amazon Personalize Personalize Operations API
-  description: >-
-    The Personalize Operations API from Amazon Personalize — 10 operation(s) for personalize operations.
+  description: The Personalize Operations API from Amazon Personalize — 10 operation(s) for personalize operations.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -209,10 +455,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-operations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-get-recommendations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-get-personalized-ranking-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-get-action-recommendations-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-put-events-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-recipes-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-put-action-interactions-request-schema.json
 - aid: amazon-personalize:amazon-personalize-recommender-api
   name: Amazon Personalize Personalize Recommender API
-  description: >-
-    The Personalize Recommender API from Amazon Personalize — 7 operation(s) for personalize recommender.
+  description: The Personalize Recommender API from Amazon Personalize — 7 operation(s) for personalize recommender.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -220,10 +477,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-recommender-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-recommender-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-recommenders-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-recommenders-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-update-recommender-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-recommender-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-recommender-request-schema.json
 - aid: amazon-personalize:amazon-personalize-schema-api
   name: Amazon Personalize Personalize Schema API
-  description: >-
-    The Personalize Schema API from Amazon Personalize — 4 operation(s) for personalize schema.
+  description: The Personalize Schema API from Amazon Personalize — 4 operation(s) for personalize schema.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -231,10 +499,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-schema-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-schema-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-schemas-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-schemas-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-schema-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-delete-schema-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-schema-response-schema.json
 - aid: amazon-personalize:amazon-personalize-solution-api
   name: Amazon Personalize Personalize Solution API
-  description: >-
-    The Personalize Solution API from Amazon Personalize — 5 operation(s) for personalize solution.
+  description: The Personalize Solution API from Amazon Personalize — 5 operation(s) for personalize solution.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -242,11 +521,21 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-solution-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-create-solution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-update-solution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-solutions-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-list-solutions-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-solution-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-update-solution-response-schema.json
 - aid: amazon-personalize:amazon-personalize-solution-version-api
   name: Amazon Personalize Personalize Solution Version API
-  description: >-
-    The Personalize Solution Version API from Amazon Personalize — 3 operation(s) for personalize solution
-    version.
+  description: The Personalize Solution Version API from Amazon Personalize — 3 operation(s) for personalize solution version.
   humanURL: https://aws.amazon.com/personalize/
   baseURL: https://personalize.amazonaws.com
   tags:
@@ -254,106 +543,33 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/amazon-personalize-solution-version-api-openapi.yml
-common:
-  - type: CapabilityMap
-    url: capabilities/amazon-personalize-capability-edges.yml
-    name: Amazon Personalize Business Capability Map
-  - type: Plans
-    url: plans/amazon-personalize-plans-pricing.yml
-  - type: RateLimits
-    url: rate-limits/amazon-personalize-rate-limits.yml
-  - type: FinOps
-    url: finops/amazon-personalize-finops.yml
-  - type: AgenticAccess
-    url: agentic-access/amazon-personalize-agentic-access.yml
-  - type: TrustCenter
-    url: security/amazon-personalize-trust-center.yml
-  - type: VulnerabilityDisclosure
-    url: security/amazon-personalize-vulnerability-disclosure.yml
-  - type: DomainSecurity
-    url: security/amazon-personalize-domain-security.yml
-  - type: Authentication
-    url: authentication/amazon-personalize-authentication.yml
-  - type: PostmanWorkspace
-    url: https://www.postman.com/kinlaneapi/amazon-personalize/overview
-  - type: Arazzo
-    url: arazzo/amazon-personalize-create-dataset-group-workflow.yml
-    name: Amazon Personalize Create a Dataset Group
-  - type: Blog
-    url: https://aws.amazon.com/blogs/machine-learning/category/artificial-intelligence/amazon-personalize/
-  - type: Support
-    url: https://aws.amazon.com/premiumsupport/
-  - type: Console
-    url: https://console.aws.amazon.com/personalize/
-  - type: CLI Reference
-    url: https://docs.aws.amazon.com/cli/latest/reference/personalize/
-  - type: SDKs
-    url: https://aws.amazon.com/tools/
-  - type: Service Status
-    url: https://status.aws.amazon.com/
-  - type: Compliance
-    url: https://aws.amazon.com/compliance/
-  - type: TermsOfService
-    url: https://aws.amazon.com/service-terms/
-  - type: Website
-    url: https://aws.amazon.com/personalize/
-  - type: Documentation
-    url: https://docs.aws.amazon.com/personalize/
-  - type: Pricing
-    url: https://aws.amazon.com/personalize/pricing/
-  - type: GettingStarted
-    url: https://aws.amazon.com/personalize/getting-started/
-  - type: FAQ
-    url: https://aws.amazon.com/personalize/faqs/
-  - type: PrivacyPolicy
-    url: https://aws.amazon.com/privacy/
-  - type: Signup
-    url: https://portal.aws.amazon.com/billing/signup
-  - type: GitHubOrganization
-    url: https://github.com/aws
-  - type: StackOverflow
-    url: https://stackoverflow.com/questions/tagged/amazon-personalize
-  - type: Code Examples
-    url: https://docs.aws.amazon.com/code-library/latest/ug/personalize_code_examples.html
-  - type: SpectralRules
-    url: rules/amazon-personalize-spectral-rules.yml
-  - type: Vocabulary
-    url: vocabulary/amazon-personalize-vocabulary.yaml
-  - type: JSONLD
-    url: json-ld/amazon-personalize-context.jsonld
-  - type: JSONLD
-    url: json-ld/amazon-personalize-openapi-context.jsonld
   - type: JSONSchema
-    url: json-schema/amazon-personalize-schema.json
-    title: Amazon Personalize
+    url: json-schema/amazon-personalize-create-solution-version-request-schema.json
   - type: JSONSchema
-    url: json-schema/openapi-campaign-schema.json
-    title: Openapi Campaign
+    url: json-schema/amazon-personalize-list-solution-versions-request-schema.json
   - type: JSONSchema
-    url: json-schema/openapi-create-dataset-group-request-schema.json
-    title: Openapi Create Dataset Group Request
+    url: json-schema/amazon-personalize-list-solution-versions-response-schema.json
   - type: JSONSchema
-    url: json-schema/openapi-dataset-group-schema.json
-    title: Openapi Dataset Group
+    url: json-schema/amazon-personalize-describe-solution-version-request-schema.json
   - type: JSONSchema
-    url: json-schema/openapi-solution-schema.json
-    title: Openapi Solution
-  - type: Integrations
-    url: https://aws.amazon.com/marketplace
+    url: json-schema/amazon-personalize-create-solution-version-response-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-personalize-describe-solution-version-response-schema.json
 integrations:
-  - name: Sign in
-  - name: Agent Mode
-  - name: Why AWS Marketplace?
-  - name: Get started in AWS Marketplace
-  - name: Industry
-  - name: Resources
-  - name: Become a Channel Partner
-  - name: Sell in AWS Marketplace
-  - name: Manage Your Account
-maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
-    url: https://apievangelist.com
+- name: Sign in
+- name: Agent Mode
+- name: Why AWS Marketplace?
+- name: Get started in AWS Marketplace
+- name: Industry
+- name: Resources
+- name: Become a Channel Partner
+- name: Sell in AWS Marketplace
+- name: Manage Your Account
 include: []
 x-parent: amazon-web-services
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v6
