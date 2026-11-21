@@ -1,3 +1,4 @@
+aid: amazon-personalize
 name: Amazon Personalize
 description: Amazon Personalize is a fully managed machine learning service that enables developers to create individualized recommendations for
   customers using their applications. Its control-plane API manages datasets, schemas, import and export jobs, solutions, campaigns, recommenders
@@ -31,7 +32,7 @@ accessModel:
   - authentication
   - rate-limits
   - security
-  generated: '2026-11-13'
+  generated: '2026-11-20'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 tags:
